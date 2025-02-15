@@ -2,20 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { Menu } from "lucide-react";
 import styles from "./header.module.css";
-import Modal from "@/components/modal/modal";
 import Logo from "@/ui/logo/logo";
-import SignInForm from "@/ui/signup-form/signup-form";
+import ThemeSwitcher from "@/components/theme-switcher/theme-switcher";
 
 interface HeaderParams {
   user: { image: string, alt?: string }
 }
 
 export default function Header({ user }: HeaderParams) {
+  const { theme, setTheme } = useTheme();
   const [mobileNavShown, setMobileNavShown] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
-  const [openModal, setOpenModal] = useState<boolean>(false);
   const toggle = () => setMobileNavShown(!mobileNavShown);
 
   useEffect(() => {
@@ -28,9 +28,13 @@ export default function Header({ user }: HeaderParams) {
   return (
     <>
       <header className={styles.header}>
-        <Link href="/">
-          <Logo ghPicture={user.image} />
-        </Link>
+
+        <div className={styles.row}>
+          <ThemeSwitcher theme={theme} setTheme={setTheme} />
+          <Link href="/">
+            <Logo ghPicture={user.image} />
+          </Link>
+        </div>
 
         {!isMobile && (
           <nav className={styles.navbar}>
@@ -64,10 +68,6 @@ export default function Header({ user }: HeaderParams) {
           resume
         </Link>
       </nav>
-
-      <Modal open={openModal} onClick={() => setOpenModal(false)}>
-        <SignInForm />
-      </Modal>
     </>
   );
 }

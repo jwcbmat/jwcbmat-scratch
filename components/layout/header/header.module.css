@@ -31,6 +31,13 @@
   display: none;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
 @media (max-width: 768px) {
   .button {
     display: none;
