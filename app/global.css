@@ -1,6 +1,7 @@
 :root {
   --ds-background-100: #fff;
   --ds-background-over: rgb(255 255 255 / 0.5);;
+  --text-color: hsla(0, 2%, 42%, 1);
   --accents-1: #fafafa;
   --accents-2: #eaeaea;
   --accents-3: #efefef;
@@ -21,6 +22,7 @@
 .dark {
   --ds-background-100: #000;
   --ds-background-over: rgb(0 0 0 / 0.5);;
+  --text-color: hsla(0, 2%, 42%, 1);
   --accents-1: #1e1e1e;
   --accents-2: #2c2c2c;
   --accents-3: #333333;

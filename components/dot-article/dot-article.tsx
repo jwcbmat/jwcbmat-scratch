@@ -1,6 +1,6 @@
 import styles from "./dot-article.module.css";
 
-interface DotArticleProps {
+export interface DotArticleProps {
   title: string;
   company: string;
   startDate: string;
@@ -24,13 +24,13 @@ export default function DotArticle({ title, company, startDate, endDate, text }:
       <li>
         <article className={styles.item}>
           <time dateTime={startDate} className={styles.datePillDate}>
-            <span>{dateView(startDate)} - {endDate ? dateView(startDate) : "Present"}</span>
+            <span>{dateView(startDate)} - {endDate ? dateView(endDate) : "Present"}</span>
             <div className={styles.datePillCircleOuter}>
               <div className={styles.datePillCircleInner} />
             </div>
           </time>
           <h2>{title}</h2>
-          <h3>{company}</h3>
+          <h3 className={styles.company}>{company}</h3>
           <div>
             <div>
               <p>{text}</p>
