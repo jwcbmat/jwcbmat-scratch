@@ -2,9 +2,7 @@
 
 import styles from "./footer.module.css";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import ThemeSwitcher from "@/components/theme-switcher/theme-switcher";
 import Logo from "@/ui/logo/logo";
 
 interface FooterParams {
@@ -12,7 +10,6 @@ interface FooterParams {
 }
 
 export default function Footer({ user }: FooterParams) {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -52,9 +49,6 @@ export default function Footer({ user }: FooterParams) {
           </div>
         </div>
       </div>
-      <div className={styles.row}>
-        <span>2025</span>
-        <ThemeSwitcher theme={theme} setTheme={setTheme} /> </div>
     </footer>
   );
 }
