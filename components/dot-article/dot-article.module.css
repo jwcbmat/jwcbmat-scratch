@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  border: 5px;
+
+
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .datePillDate {
+      position: absolute;
+      top: 6px;
+      right: calc(100% + 38px);
+      transform: translateX(-.5px);
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      width: max-content;
+
+      .datePillCircleOuter {
+        width: 20px;
+        height: 20px;
+        border-radius: 99px;
+        background: var(--ds-background-100);
+        background-clip: padding-box;
+        border: 1px solid var(--ds-gray-400);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .04);
+        display: grid;
+        place-items: center;
+
+        .datePillCircleInner {
+          width: 8px;
+          height: 8px;
+          border-radius: 99px;
+          background: var(--ds-avocado-100);
+        }
+      }
+    }
+  }
+}
