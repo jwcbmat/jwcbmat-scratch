@@ -10,6 +10,7 @@
   --ds-gray-400: hsla(0,0%,92%,1);
   --ds-gray-900: hsla(0,0%,40%,1);
   --ds-gray-1000: hsla(0, 0%, 9%, 1);
+  --ds-avocado-100: #2A9E00;
   --font-foreground: #000;
   --guide-color: hsla(0,0%,92%,1);
   --input-shadow: #E7E4E4;
@@ -29,6 +30,8 @@
   --ds-gray-400: hsla(0,0%,18%,1);
   --ds-gray-900: hsla(0, 0%, 70%, 1);
   --ds-gray-1000: hsla(0, 0%, 90%, 1);
+  --ds-blue-900: hsla(210, 100%, 66%, 1);
+  --ds-avocado-100: #2A9E00;
   --font-foreground: #e0e0e0;
   --guide-color: hsla(0, 0%, 10%, 1);
   --input-shadow: #3F3F46;
@@ -61,8 +64,13 @@ a, button {
   }
 }
 
+h1 {
+  font-size: 3.75rem;
+}
+
 h1, h2, h3 {
   color: var(--font-foreground);
+  overflow-wrap: break-word;
   margin: 0;
 }
 
