@@ -41,9 +41,6 @@ export default function Header({ user }: HeaderParams) {
             <Link title="home" href="/">
               home
             </Link>
-            <Link title="posts" href="/posts">
-              posts
-            </Link>
             <Link title="resume" href="/resume">
               resume
             </Link>
@@ -60,9 +57,6 @@ export default function Header({ user }: HeaderParams) {
       >
         <Link title="home" href="/">
           home
-        </Link>
-        <Link title="posts" href="/posts">
-          posts
         </Link>
         <Link title="resume" href="/resume">
           resume
